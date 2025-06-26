@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block title %}
+Trial page
+{% endblock %}
+{% block content %}
+<h1>All Trial for user.</h1>
+<div class='grid grid-cols-3 gap-4 m-4'>
+{% for trial in trials %}
+<div class='bg-gray-500 p-2'>
+   <img class='rounded shadow-lg' src='{{ trial.image.url }}' alt=''>
+   <h3 class='font-bold'>{{trial.name}}</h3>
+   <a href="{% url 'trial_detail' trial.id %}">
+      <button class='inline-flex w-[100%] items-center justify-center px-4 py-2 
+                     border border-transparent text-sm font-medium rounded-md
+                   text-white bg-amber-500 hover:bg-amber-800 blck focus:outline-none 
+                     focus:ring-offset-2 focus:ring-orange-500'>
+         {{trial.get_type_display}} 
+      </button>
+   </a>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
