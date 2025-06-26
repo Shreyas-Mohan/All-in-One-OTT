@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chai aur Django</title>
+    <link rel='stylesheet' href='{% static 'styles.css' %}'>
+</head>
+<body>
+    <h1>Welcome to the Index Page</h1>
+</body>
+</html>
+  {% endcomment %}
+
+
+{% block title %}Home Page{% endblock %}
+{% block content %}<H1 class='bg-green-700 text-5xl'>Chai aur Code | Home Page</H1>{% endblock %}
